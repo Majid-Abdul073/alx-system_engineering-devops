@@ -1,58 +1,80 @@
-# 0x03 Shell, init files, variables and expansions
+![image](https://user-images.githubusercontent.com/105258746/188752518-2606bf0a-0726-4c8a-8843-eb06d121d9cd.png)
 
-## Resources
+# SHELL, init files, variables and expansions PROJECTS
 
-- Shell [Expansion](http://linuxcommand.org/lc3_lts0080.php).
-- Shell [Arithmetic](https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html).
-- Bash [Variable](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html).
-- Bash [Shell initialization files](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_01.html).
-- [The alias Command](http://www.linfo.org/alias.html).
+## TASKS
 
-## Tasks
+### Note: When doing this project, After using text editor of your choice to create and access the file on insert mode.Ensure the first line is always having `#!/bin/bash`, then the second line is having the correct command/answer.
+(From your terminal, convert the file created to `SCRIPT` i.e: chmod u+x filename)
 
-0. [\<o>](./0-alias) : A script that creates an alias.
-   - Name of alias: `ls`
-   - Value: `rm *` 
-1. [Hello you](./1-hello_you) : A script that prints `hello user`, where user is the current Linux user.
-2. [The path to success is to take massive, determined action](./2-path) : A script that adds `/action` to the `PATH`. `/action` should be the last directory the shell looks into when looking for a program.
-3. [If the path be beautiful, let us not ask where it leads](./3-paths) : A script that counts the number of directories in the `PATH`.
-4. [Global variables](./4-global_variables) : A script that prints all the enviroment variables.
-5. [Local variables ](./5-local_variables) : A script that lists all local variables and enviroment variables, and functions.
-   - Name of variable : `HOLBERTON`
-   - Value : `Betty`
-6. [Local variable](./6-create_local_variable) : A script that creates a new local variable.
-7. [Global variable](./7-create_global_variable) : A script that creates a new global variable.
-   - Name of variable : `HOLBERTON`
-   - Value : `Betty`
-8. [Every addition to true knowledge is an addition to human power](./8-true_knowledge) : A script that prints the results of the addition of 128 with the value stored in the enviroment variable `TRUEKNOWLEDGE`, followed by a new line.
-   - Remember to export variable TRUEKNOWLEDGE : `export TRUEKNOWLEDGE=1209`
-   - Run command this way: `./8-true_knowledge | cat -e`
-9. [Divide and rule](./9-divide_and_rule) : A script that prints the result of `POWER` divide by `DIVIDE`, followed by a new line.
-   - `POWER` and `DIVIDE` are environment variables.
-   - Variables values;
-    - export POWER=42784
-    - export DIVIDE=32
-   - Run command this way: `./9-divide_and_rule | cat -e`
-10. [Love is anterior to life, posterior to death, initial of creation, and the exponent of breath](./10-love_exponent_breath) : A script that displays the result of `BREATH` to the power of `LOVE`.
-    - `BREATH` and `LOVE` are enviroment variables.
-    - The script should display the result, followed by a new line.
-11. [There are 10 types of people in the world -- Those who understand binary, and those who don't](./11-binary_to_decimal) : A script that converts a number from base 2 to base 10.
-    - The number in base 2 is stored in the enviroment variable `BINARY`.
-    - The script should display the number in base 10, followed by a new line.
-12. [Combination](./12-combinations) : A script that prints all possible combinations of two letters, except `oo`.
-    - Letters are lower cases, from `a` to `z`.
-    - One combination per line.
-    - The output should be alpha ordered, starting with `aa`.
-    - Do not print `oo`.
-    - Your script file should contain maximum 64 characters.
-13. [Floats](./13-print_float) : A script that prints a number with two decimal places, followed by a new line.
-    - The number will be stored in the enviroment variable `NUM`.
-14. [Decimal to Hexadecimal](./100-decimal_to_hexadecimal) : A script that converts a number from base 10 to base 16.
-    - The number is base 10 is stored in the enviroment variable `DECIMAL`.
-    - The script should display the number in base 16, followed by a new line.
-15. [Everyone is a proponent of strong encryption](./101-rot13) : A script that encodes and decodes text using the rot13 encryption. Assume ASCII.
-16. [The eggs of the brood need to be an odd number](./102-odd) : A script that prints every other line from the input, starting with the first line.
-17. [I'm an instant star. Just add water and stir.](./103-water_and_stir) : A script that adds the two numbers stored in the enviroment variables `WATER` and `STIR` and prints the results.
-    - `WATER` is in base `water`.
-    - `STIR` is in base `stir`.
-    - The result should be in base `behlnort`.
+### File: 0-alias is a script that creates an alias.
+
+- input: `alias ls="rm *"`
+
+### File: 1-hello_you is a script that prints hello user, where user is the current Linux user.
+
+- input: `echo "hello $USER"`
+
+### File: 2-path is a script that adds /action to the PATH.
+
+- input: `PATH=$PATH:/action`
+
+### File: 3-paths is a script that counts the number of directories in the PATH.
+
+- input: `echo $PATH | tr ':' '\n' | wc -l`
+
+### File: 4-global_variables is a script that lists environment variables.
+
+- input: `printenv`
+
+### File: 5-local_variables is a script that lists all local variables and environment variables, and functions.
+
+- input: `set`
+
+### File: 6-create_local_variable is a script that creates a new local variable.
+
+- input: `BEST="School"`
+
+### File: 7-create_global_variable is a script that creates a new global variable.
+
+- input: `export BEST="School"`
+
+### File: 8-true_knowledge is a script that prints the result of the addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE, followed by a new line.
+
+- input: `echo $((128 + $TRUEKNOWLEDGE))`
+
+### File: 9-divide_and_rule is a script that prints the result of POWER divided by DIVIDE, followed by a new line.
+
+- input: `echo $((POWER/DIVIDE))`
+
+### File: 10-love_exponent_breath is a script that displays the result of BREATH to the power LOVE.
+
+- input: `echo $((BREATH**LOVE))`
+
+### File: 11-binary_to_decimal` is a script that converts a number from base 2 to base 10.
+
+- input: `echo $((2#$BINARY))`
+
+### File: 12-combinations is a script that prints all possible combinations of two letters, except oo.
+
+- input: `echo {a..z}{a..z} | tr ' ' '\n' | grep -v "oo"`
+
+### File: 13-print_float is a script that prints a number with two decimal places.
+
+- input: `printf '%.2f\n' $NUM`
+
+### File: 100-decimal_to_hexadecimal is a script that converts a number from base 10 to base 16.
+
+- input: `printf '%x\n' $DECIMAL`
+
+### File: 101-rot13 is a script that encodes and decodes text using the rot13 encryption.
+
+- input: `tr 'A-Za-z' 'N-ZA-Mn-za-m'`
+
+### File: 102-odd is a script that prints every other line from the input, starting with the first line.
+
+- input: `paste -d, - - | cut -d, -f1`
+
+### File: 103-water_and_stir is a shell script that adds the two numbers stored in the environment variables WATER and STIR and prints the result.
+
+- input: `printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestchol`
