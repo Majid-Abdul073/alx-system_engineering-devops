@@ -1,37 +1,37 @@
-File 0-current_working_directory prints the current working directory.
+Shell, I/O Redirections and filters
+Project done during Full Stack Software Engineering studies at Holberton School. It aims to learn about how to handle standard input and output and how to combine commands and filters with redirections in Shell.
 
-File 1-listit displays the contents list of the current directory.
+Technologies
+Scripts written in Bash 4.3.11(1)
+Tested on Ubuntu 14.04 LTS
+Files
+All of the following files are scripts:
 
-File 2-bring_me_home changes the working directory to the user’s home directory.
-
-File 3-listfiles displays current directory contents in a long format.
-
-File 4-listmorefiles displays current directory contents, including hidden files (starting with .).
-
-File 5-listfilesdigitonly displays current directory contents in long format, with user and group IDs displayed numerically and hidden files.
-
-File 6-firstdirectory creates a script that creates a directory named holberton in the /tmp/ directory.
-
-File 7-movethatfile moves the file betty from /tmp/ to /tmp/holberton.
-
-File 8-firstdelete deletes he file betty.
-
-File 9-firstdirdeletion deletes the directory holberton that is in the /tmp directory.
-
-File 10-back writes a script that changes the working directory to the previous one.
-
-File 11-lists writes a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
-
-File 12-file_type writes a script that prints the type of the file named iamafile.
-
-File 13-symbolic_link creates a symbolic link to /bin/ls, named ls.
-
-File 14-copy_html creates a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
-
-File 15-lets_move creates a script that moves all files beginning with an uppercase letter to the directory /tmp/u.
-
-File 16-clean_emacs creates a script that deletes all files in the current working directory that end with the character ~.
-
-File 17-tree creates a script that creates the directories welcome/, welcome/to/ and welcome/to/holberton in the current directory.
-
-File 18-commas writes a command that lists all the files and directories of the current directory, separated by commas (,).
+Filename	Description
+0-hello_world	Prints "Hello, World", followed by a new line to the standard output
+1-confused_smiley	Displays a confused smiley "(Ôo)'
+2-hellofile	Displays the content of the /etc/passwdfile
+3-twofiles	Displays the content of /etc/passwd and /etc/hosts
+4-lastlines	Displays the last 10 lines of /etc/passwd
+5-firstlines	Displays the first 10 lines of /etc/passwd
+6-third_line	Displays the third line of the file iacta
+7-file	Creates a file named exactly \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:) containing the test Holberton School ending by a new line
+8-cwd_state	Writes into the file ls_cwd_content the result of the command ls -la.
+9-duplicate_last_line	Duplicates the last line of the file iacta
+10-no_more_js	Deletes all the regular files with a .js extension that are present in the current directory and all its subfolders
+11-directories	Counts the number of directories and sub-directories in the current directory
+12-newest_files	Displays the 10 newest files in the current directory
+13-unique	Takes a list of words as input and prints only words that appear exactly once
+14-findthatword	Displayes lines containing the pattern "root" from the file /etc/passwd
+15-countthatword	Displays the number of lines that contain the pattern "bin" in the file /etc/passwd
+16-whatsnext	Displays lines containing the patter "root" and 3 lines after them in the file /etc/passwd
+17-hidethisword	Displays all the lines in the file /etc/passwd that do not contain the pattern "bin"
+18-letteronly	Displays all lines of the file /etc/ssh/sshd_config starting with a letter
+19-AZ	Replaces all characters A and c from input to Z and e respectively
+20-hiago	Removes all letters c and C from input
+21-reverse	Reverses its input
+22-users_and_homes	Displays all users and their home directories, sorted by users
+100-empty_casks	Finds all empty files and directories in the current directory and all sub-directories
+101-gifs	Lists all the files with a .gif extension in the current directory and all its sub-directories
+102-acrostic	Decodes acrostics that use the first letter of each line
+103-the_biggest_fan	Parses web servers in TSV format as input and displays the 11 hosts or IP addresses which did the most requests
